@@ -1,25 +1,16 @@
 {
     "name": "TTC-CatalogApp",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "JET Front-end",
     "author": "cam.crockett@oracle.com",
     "scripts": {
         "prepublish": "zip -r target/TTC-CatalogApp.zip node_modules js manifest.json *.js"
     },
     "dependencies": {
-		"es6-promise": "4.0.5",
-		"hammerjs": "2.0.8",
-		"jquery": "3.1.1",
-		"jquery-ui": "1.12.0",
-		"signals": "1.0.0",
-		"knockout": "3.4.0",
-		"requirejs": "2.3.2",
-		"requirejs-text": "2.0.15",
-		"webcomponents.js": "0.7.24",
-		"proj4": "2.3.14",
-		"require-css": "0.1.8"
-        "body-parser": "^1.12.4",
-        "express": "^4.12.4"
+        "body-parser": "1.12.4",
+        "express": "4.12.4",
+        "jwt-simple": "0.3.0",
+        "lodash": "3.8.0"
     },
     "engines": {
         "node": ">=4.0.0"

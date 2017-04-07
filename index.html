@@ -36,25 +36,6 @@
         </header>
         <div role="main" class="oj-web-applayout-max-width oj-web-applayout-content">
             <div class="oj-flex-items-pad">
-                <!--            CATALOG DISPLAY-->
-                <div class="oj-flex">
-                    <div class="oj-panel oj-flex-item">
-                        <h3 data-bind="text: catalogDescription"></h3>
-                        <div id="masonrylayout-basic-catalog">
-                            <div id="masonryLayout" data-bind="ojComponent: {component: 'ojMasonryLayout'}">
-                                <!-- ko foreach: catalogItems -->
-                                <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-2x2 oj-panel-shadow-lg'">
-                                    <h3 style="text-align:center;" data-bind="text: name"></h3>
-                                    <p style="text-align:center;">
-                                        <image width="60%" data-bind="attr: {src: image}"></image>
-                                    </p>
-                                    <p style="text-align:center;" data-bind="text: convertedPrice"></p>
-                                </div>
-                                <!-- /ko -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!--            CURRENCY SELECTOR-->
                 <div class="oj-flex">
                     <div class="oj-panel oj-flex-item">
@@ -67,6 +48,26 @@
                         </select>
                     </div>
                 </div>
+                <!--            CATALOG DISPLAY-->
+                <div class="oj-flex">
+                    <div class="oj-panel oj-flex-item">
+                        <h3 data-bind="text: catalogDescription"></h3>
+                        <div id="masonrylayout-basic-catalog">
+                            <div id="catalogMasonryLayout" data-bind="ojComponent: {component: 'ojMasonryLayout'}">
+                                <div data-bind="foreach: catalogItems">
+                                    <div class="oj-panel demo-tile" data-bind="css: 'oj-masonrylayout-tile-2x2 oj-panel-shadow-lg'">
+                                        <h3 style="text-align:center;" data-bind="text: name"></h3>
+                                        <p style="text-align:center;">
+                                            <image width="80" data-bind="attr: {src: image}"></image>
+                                        </p>
+                                        <p style="text-align:center;" data-bind="text: description"></p>
+                                        <p style="text-align:center;" data-bind="html: convertedPrice"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--            ACHIEVEMENT UNLOCKER-->
                 <div class="oj-flex">
                     <div class="oj-panel oj-flex-item">
@@ -75,11 +76,11 @@
                             <div id="masonryLayout" data-bind="ojComponent: {component: 'ojMasonryLayout'}">
                                 <!-- ko foreach: achievements -->
                                 <div class="oj-panel" data-bind="css: locked?'oj-masonrylayout-tile-1x2 oj-panel-alt1':'oj-masonrylayout-tile-1x2 oj-panel-alt2'">
-                                    <h4 style="text-align:center;" data-bind="text: locked? 'Locked':name"></h4>
+                                    <h4 style="text-align:center;" data-bind="text: locked()? 'Locked':name"></h4>
                                     <p style="text-align:center;">
-                                        <image height="110" data-bind="attr: {src: locked? 'images/locked.png' : image}"></image>
+                                        <image height="110" data-bind="attr: {src: locked()? 'images/locked.png' : image}"></image>
                                     </p>
-                                    <p style="text-align:center;" data-bind="text: locked?required:description"></p>
+                                    <p style="text-align:center;" data-bind="text: locked()?required:description"></p>
                                 </div>
                                 <!-- /ko -->
                             </div>
