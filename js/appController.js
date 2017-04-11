@@ -82,7 +82,6 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojknockout', 'ojs/ojmasonrylayout', 'ojs/
         //LAB 400
         self.currencyDisabled = ko.observable(true);
         self.currencyLabel = ko.observable("No Currency Microservice Detected, complete Lab 400 to unlock");
-        self.currencyLabel("Select Currency");
         self.currencies = ko.observableArray([{
                         postfix:' USD',
                         prefix:'$',
