@@ -5,8 +5,8 @@ var http = require('http')
 var express = require('express')
 var bodyParser = require('body-parser')
 var PORT = process.env.PORT || 8084
-var CATALOG_MICROSERVICE_URL = process.env.CATALOG_MICROSERVICE_URL || "http://localhost:8085/catalog";
-var CURRENCY_MICROSERVICE_URL = process.env.CURRENCY_MICROSERVICE_URL || "http://localhost:8089/currenciesFromUSD";
+var CATALOG_MICROSERVICE_URL = process.env.CATALOG_MICROSERVICE_URL || "http://localhost:8085/catalog/v1";
+var CURRENCY_MICROSERVICE_URL = process.env.CURRENCY_MICROSERVICE_URL || "http://localhost:8089/currencies/v1/usd";
 
 var app = express()
 
