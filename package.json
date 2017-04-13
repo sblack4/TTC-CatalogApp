@@ -4,7 +4,7 @@
     "description": "JET Front-end",
     "author": "cam.crockett@oracle.com",
     "scripts": {
-        "prepublish": "zip -r target/TTC-CatalogApp.zip node_modules js manifest.json *.js"
+        "prepublish": "zip -r target/TTC-CatalogApp.zip node_modules js images css manifest.json *.js"
     },
     "dependencies": {
         "body-parser": "1.12.4",
