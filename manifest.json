@@ -1,7 +1,8 @@
 {
   "runtime":{
-    "majorVersion":"4.0.0"
+    "majorVersion":"4"
   },
   "command": "node server.js",
-  "release": {}
+  "release": {},
+  "notes": ""
 }
