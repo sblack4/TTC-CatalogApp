@@ -51,14 +51,14 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojknockout', 'ojs/ojmasonrylayout', 'ojs/
             , self.level4
         ];
         //        LAB 200
-        self.catalogDescription = ko.observable('No Catalog Microservice Detected, complete <a href="https://c-rocket.github.io/TouchTheCloudDevOpsLab/LabGuide200" target="_blank">Lab 200</a> to unlock');
+        self.catalogDescription = ko.observable('No Catalog Microservice Detected, complete Lab 200 to unlock');
         //Lab 300
         self.catalogItems = ko.observableArray();
         $.getJSON("/catalog", function(data) { 
             console.log(data);
             if(data != null){
                 if(data.length == 0){
-                    self.catalogDescription('Catalog Connected but no data is detected, complete <a href="https://c-rocket.github.io/TouchTheCloudDevOpsLab/LabGuide300" target="_blank">Lab 300</a> to fill Catalog');
+                    self.catalogDescription('Catalog Connected but no data is detected, complete Lab 300 to fill Catalog');
                     self.level2.locked(false);
                 }
                 else{
@@ -81,7 +81,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojknockout', 'ojs/ojmasonrylayout', 'ojs/
         });
         //LAB 400
         self.currencyDisabled = ko.observable(true);
-        self.currencyLabel = ko.observable('No Currency Microservice Detected, complete <a href="https://c-rocket.github.io/TouchTheCloudDevOpsLab/LabGuide400" target="_blank">Lab 400</a> to unlock');
+        self.currencyLabel = ko.observable('No Currency Microservice Detected, complete Lab 400 to unlock');
         self.currencies = ko.observableArray([{
                         postfix:' USD',
                         prefix:'$',
