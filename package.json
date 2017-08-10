@@ -5,7 +5,7 @@
     "author": "cam.crockett@oracle.com",
     "main": "server.js",
     "scripts": {
-        "prepublish": "zip -r TTC-CatalogApp.zip manifest.json *.js *.html *.css node_modules js images css"
+        "NOT:prepublish": "zip -r TTC-CatalogApp.zip manifest.json *.js *.html *.css node_modules js images css"
     },
     "dependencies": {
         "body-parser": "1.12.4",
